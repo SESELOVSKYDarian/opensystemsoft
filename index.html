@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>OpenSystemSoft - Soluciones de Software e Infraestructura</title>
+    <title>OpenSystemSoft - AI WhatsApp Concierge Platform</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -39,11 +39,32 @@
             animation: {
               "fade-in-up": "fadeInUp 0.8s ease-out forwards",
               "pulse-slow": "pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "icon-pulse": "iconPulse 2.4s ease-in-out infinite",
+              "icon-swap": "iconSwap 2.8s ease-in-out infinite",
+              "icon-orbit": "iconOrbit 4s linear infinite",
+              "icon-pop": "iconPop 2.6s ease-in-out infinite",
             },
             keyframes: {
               fadeInUp: {
                 "0%": { opacity: "0", transform: "translateY(20px)" },
                 "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              iconPulse: {
+                "0%, 100%": { transform: "scale(1)", opacity: "0.7" },
+                "50%": { transform: "scale(1.08)", opacity: "1" },
+              },
+              iconSwap: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-6px)" },
+              },
+              iconOrbit: {
+                "0%": { transform: "rotate(0deg)" },
+                "100%": { transform: "rotate(360deg)" },
+              },
+              iconPop: {
+                "0%, 100%": { transform: "scale(1)" },
+                "35%": { transform: "scale(1.12)" },
+                "70%": { transform: "scale(0.96)" },
               },
             },
           },
@@ -103,6 +124,14 @@
           transparent 100%
         );
       }
+      .icon-ring::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 999px;
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        animation: iconOrbit 8s linear infinite;
+      }
     </style>
   </head>
   <body
@@ -122,7 +151,7 @@
               >
             </div>
             <span class="text-white text-sm font-semibold tracking-wide"
-              >OpenSystemSoft</span
+              >OpenSystemSoft AI</span
             >
           </div>
           <nav
@@ -130,25 +159,25 @@
           >
             <a
               class="px-4 py-1.5 text-xs font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all"
-              href="#servicios"
-              >Servicios</a
+              href="#plataforma"
+              >Plataforma</a
             >
             <a
               class="px-4 py-1.5 text-xs font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all"
-              href="#nosotros"
-              >Nosotros</a
+              href="#impacto"
+              >Impacto</a
             >
             <a
               class="px-4 py-1.5 text-xs font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all"
-              href="#socios"
-              >Socios</a
+              href="#clientes"
+              >Clientes</a
             >
           </nav>
           <div class="flex items-center gap-4">
             <button
               class="hidden sm:flex items-center justify-center h-9 px-4 rounded-lg bg-white text-black hover:bg-slate-200 text-xs font-bold transition-all transform hover:scale-105"
             >
-              Solicitar Demo
+              Agenda una Demo
             </button>
             <button
               class="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
@@ -190,22 +219,23 @@
           </span>
           <span
             class="text-[11px] font-medium text-slate-300 uppercase tracking-wider"
-            >Nuevas soluciones v2.0</span
+            >AI WhatsApp Concierge</span
           >
         </div>
         <h1
           class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-white mb-8 animate-fade-in-up leading-[0.9]"
           style="animation-delay: 0.2s"
         >
-          Infraestructura <br class="hidden sm:block" />
-          <span class="text-gradient-primary">Inteligente</span>
+          AI que conversa, <br class="hidden sm:block" />
+          vende y reserva <span class="text-gradient-primary">en WhatsApp</span>
         </h1>
         <p
           class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
           style="animation-delay: 0.3s"
         >
-          Simplificamos la complejidad tecnológica. Software de compras avanzado
-          e infraestructura escalable para la empresa del futuro.
+          Un SaaS todo-en-uno para negocios de cualquier nicho: chatbot con
+          visión, conversaciones en WhatsApp centralizadas en Chatwoot, handoff
+          humano inmediato y un panel admin para operar clientes y planes.
         </p>
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up"
@@ -214,7 +244,7 @@
           <button
             class="w-full sm:w-auto h-12 px-8 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold transition-all hover:shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] flex items-center justify-center gap-2 group"
           >
-            Comenzar Ahora
+            Ver la Plataforma
             <span
               class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform"
               >arrow_forward</span
@@ -223,8 +253,22 @@
           <button
             class="w-full sm:w-auto h-12 px-8 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium transition-all flex items-center justify-center gap-2 border border-white/5"
           >
-            Ver Demo
+            Hablar con Ventas
           </button>
+        </div>
+        <div
+          class="mt-10 flex flex-wrap justify-center gap-3 text-xs text-slate-400 animate-fade-in-up"
+          style="animation-delay: 0.5s"
+        >
+          <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10"
+            >24/7 sin perder consultas</span
+          >
+          <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10"
+            >Menos saturación en WhatsApp</span
+          >
+          <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10"
+            >Control y métricas claras</span
+          >
         </div>
         <div
           class="mt-20 relative max-w-5xl mx-auto perspective-1000 animate-fade-in-up"
@@ -237,9 +281,9 @@
               class="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent opacity-50 z-20 pointer-events-none"
             ></div>
             <img
-              alt="Modern server infrastructure dashboard"
+              alt="AI chatbot operations dashboard with WhatsApp and Chatwoot"
               class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkv-cBaoGGkbwxjIU-uf_gciZs8vEr1-akVG_tCItNY0rrErdlMqW_m67_HRcw2MdOaaiIboK7x0TKG9WRNlf7Ykw7BK9wKVA_01V9Ywv8PF-aDLMDwWxeSCE8bU4bayNc9Ijsyi-sXX63I3LKXYXcO_GGQLJrKDNHbAVpTzvpjPpKpipOmUiCkY7aEqugbyrvtHRsMVEwvBs7bbAcyrYVg9GLBFIAkf2F53OacTbhA0t5Gy8y5XJ5qFdyFZsFQEt6nT6ZD-M9cLE"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLFFcsoNwvB2xkfES6UQhFaXJs7ff9q_W7S2yWljEj4nCDu0hScq7OHCQp-nS0N-cT5H6plc9ooMRrtjtjGA1gzaG4-sTB9A5s59ziCht6s05_jp6efM_c61fpW0NyhK3Yb6Tl15EkyYB1Aa9Hx6eEJ7c-MLz6U1k6Up29CJ2OjS8DSm_w_4frSX7yjDxpAx88d4Aq4Rg6TijyS5fMhG_T4Mm7D0mY5poYDncD3Ns_9-H1jxsQS1IQVjDcx3QiEYL7OAIdXk9GUXuU"
             />
             <div
               class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050505] to-transparent z-30"
@@ -251,12 +295,12 @@
         </div>
       </div>
     </section>
-    <section class="py-12 border-t border-white/5 bg-black" id="socios">
+    <section class="py-12 border-t border-white/5 bg-black" id="clientes">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <p
           class="text-center text-xs font-medium text-slate-500 mb-10 uppercase tracking-widest"
         >
-          Powering global innovators
+          Diseñado para cada industria con WhatsApp
         </p>
         <div
           class="flex flex-wrap justify-center gap-x-12 gap-y-8 opacity-50 hover:opacity-100 transition-opacity duration-500"
@@ -264,46 +308,44 @@
           <div
             class="flex items-center gap-2 text-lg font-bold text-white tracking-tight"
           >
-            <span class="material-symbols-outlined text-2xl">cloud_circle</span>
-            TechFlow
+            <span class="material-symbols-outlined text-2xl">hotel</span>
+            Hoteles & Resorts
           </div>
           <div
             class="flex items-center gap-2 text-lg font-bold text-white tracking-tight"
           >
-            <span class="material-symbols-outlined text-2xl">dataset</span>
-            DataCore
+            <span class="material-symbols-outlined text-2xl">restaurant</span>
+            Restaurantes
           </div>
           <div
             class="flex items-center gap-2 text-lg font-bold text-white tracking-tight"
           >
-            <span class="material-symbols-outlined text-2xl">security</span>
-            SecureNet
+            <span class="material-symbols-outlined text-2xl">beach_access</span>
+            Beach Clubs
           </div>
           <div
             class="flex items-center gap-2 text-lg font-bold text-white tracking-tight"
           >
-            <span class="material-symbols-outlined text-2xl">api</span>
-            ConnectAPI
+            <span class="material-symbols-outlined text-2xl">local_parking</span>
+            Estacionamientos
           </div>
           <div
             class="flex items-center gap-2 text-lg font-bold text-white tracking-tight"
           >
-            <span class="material-symbols-outlined text-2xl"
-              >deployed_code</span
-            >
-            LogicSoft
+            <span class="material-symbols-outlined text-2xl">medical_services</span>
+            Clínicas & Servicios
           </div>
         </div>
       </div>
     </section>
-    <section class="py-32 relative bg-background-dark" id="servicios">
+    <section class="py-28 relative bg-background-dark" id="plataforma">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="mb-20">
           <h2
             class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight"
           >
             Todo lo que necesitas <br />
-            <span class="text-slate-500">para escalar sin límites.</span>
+            <span class="text-slate-500">para convertir chats en ingresos.</span>
           </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -317,29 +359,27 @@
               <div
                 class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-4 backdrop-blur-md"
               >
-                <span class="material-symbols-outlined text-2xl"
-                  >shopping_cart_checkout</span
-                >
+                <span class="material-symbols-outlined text-2xl">forum</span>
               </div>
               <h3 class="text-2xl font-bold text-white mb-2">
-                Sistema de Compras
+                Conversaciones inteligentes
               </h3>
               <p class="text-slate-400 text-sm mb-6 max-w-md">
-                Automatización inteligente de adquisiciones y control de gastos
-                en tiempo real.
+                El bot responde con visión y contexto, entiende fotos, horarios,
+                precios y disponibilidad en segundos.
               </p>
               <ul class="space-y-2 mb-6">
                 <li
                   class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                 >
                   <span class="w-1.5 h-1.5 rounded-full bg-primary"></span
-                  >Automatización de flujos
+                  >Respuestas 24/7 sin demoras
                 </li>
                 <li
                   class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                 >
                   <span class="w-1.5 h-1.5 rounded-full bg-primary"></span
-                  >Análisis predictivo
+                  >Tono humano y multilenguaje
                 </li>
               </ul>
             </div>
@@ -347,9 +387,9 @@
               class="absolute top-0 right-0 w-full h-2/3 md:h-3/4 overflow-hidden z-0 mask-image-gradient"
             >
               <img
-                alt="Dashboard interface"
+                alt="AI chatbot on WhatsApp"
                 class="w-full h-full object-cover object-top opacity-60 group-hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIkKzirDpWocBlIZAWVyxVYoxz7Kbx8HCJ_ptytIHFC8_29VLQLHx3lK9dckEzv79yfI3Z78vknlsMgeOYFQnRAFbpDyYWuw4NlYR35QcKLhEIz1PpuYnV8xVJeMR06Fy-sN4TRRsVNGvUA0tCvmocMVIXvux7uacaRrENoxPbH9fDcKroDT--_-s0niHdB5_S9b-68-Y7Amp4HMCiIm0LqSgvJ298hHOSJRmNOOy7y_COpAdnlcxmnTO6lQ0QU8NThZSQ4Dz8VQI"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWrqTMeSRhYSxph2Zrcm3S7BeGYoARxGYmKA7QgrAwyZyKTTD8f47Y0E8QnUmpqAyX4HeIeOjgVVRsoomr5GeYk8sRkicj2FZCc3sZg6dXlZb_O7vmX-BaCaH_iQwLMkqZ1psaYVR5C3ZNV6ec0VDhaS6gp3xxoRaD2qgd24t70d_UQ66ghDGwKjxpeAZCkbtO6L8Kk9iaSZA0fnl4OWmSzk7vWPvQY9pHXiaDd-dkb9EjZZH6XWaW8OE4UEwAeGWJFmWUCcQ"
               />
             </div>
           </div>
@@ -363,27 +403,27 @@
               <div
                 class="w-12 h-12 bg-accent-purple/20 rounded-xl flex items-center justify-center text-accent-purple mb-4 backdrop-blur-md"
               >
-                <span class="material-symbols-outlined text-2xl">dns</span>
+                <span class="material-symbols-outlined text-2xl">dashboard</span>
               </div>
               <h3 class="text-2xl font-bold text-white mb-2">
-                Infraestructura Cloud
+                Operación centralizada
               </h3>
               <p class="text-slate-400 text-sm mb-6 max-w-md">
-                Servidores resilientes y arquitectura de nube híbrida diseñada
-                para el rendimiento.
+                Todo el flujo en Chatwoot: inbox unificado, equipos, etiquetas,
+                SLA y métricas en tiempo real.
               </p>
               <ul class="space-y-2 mb-6">
                 <li
                   class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                 >
                   <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span
-                  >Ciberseguridad Avanzada
+                  >Handoff humano instantáneo
                 </li>
                 <li
                   class="flex items-center gap-2 text-xs text-slate-300 font-medium"
                 >
                   <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span
-                  >Monitoreo 24/7
+                  >Panel admin por cliente y plan
                 </li>
               </ul>
             </div>
@@ -391,59 +431,89 @@
               class="absolute top-0 right-0 w-full h-2/3 md:h-3/4 overflow-hidden z-0"
             >
               <img
-                alt="Servers"
+                alt="Chatwoot central inbox"
                 class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale mix-blend-luminosity group-hover:grayscale-0 group-hover:mix-blend-normal"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChLWsJY2IvLzOXdWBNrDOgrfKQMy6KMpxqGKH3_wBJczKks1IW5RhfdR7BuVL2eJjzD93cM5S56uWlOyldCcZeqPUZWUvmyqmaPgvpmWJ2Dx73tubL8Uc2pmR5XgLVlU_ab_dyi_hwoMU5Pm97EQhgilKWwhTBm1fXseH-Cy_BnrTxC3qY5NOHMUt_ilRyLEXfHFwDWwptIoqyFZi1m1SWzlkMduly47WaVrYB60f6SHNkUD5AcWr9FjZy-VBFEAAXpHiP2qMnYR8"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn5aMd3p9UgbtcqUTs5ViFKs4K5dZIeGv-lPEOu8kTWs3VyB7yqJHOFgaE_x9ccI0x7ZElP1eTsa90KR2byYgCZt7CfHMpwpj6yj2F5W3iygwS6Yv5rTIj41sNu7QkrmMdYyCGn08k0X4XzG6r3JvJvHE9X6Jqp4Mq7_c8gaJ1cETRO_Q3JELxrz_Nw39xprzeBEXm1X5Qz4QFP6DCg7dpbEMfAiKu6jE831sM7qJCYvuLH0ay5OIvMUg7KJ_oPXMxEu80Kjg"
               />
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           <div
-            class="p-8 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors"
+            class="p-7 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors relative overflow-hidden"
           >
-            <span class="material-symbols-outlined text-3xl text-white mb-4"
-              >speed</span
-            >
-            <h5 class="text-base font-bold text-white mb-2">
-              Latencia Ultra-Baja
-            </h5>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="relative size-11 rounded-full bg-primary/20 flex items-center justify-center text-primary"
+              >
+                <span class="material-symbols-outlined text-2xl animate-icon-pulse"
+                  >auto_awesome</span
+                >
+              </div>
+              <h5 class="text-base font-bold text-white">IA responde</h5>
+            </div>
             <p class="text-slate-500 text-xs leading-relaxed">
-              Optimizada para milisegundos donde cada instante cuenta en
-              operaciones críticas.
+              Respuestas automáticas con visión para menús, fotos, tarifas y
+              disponibilidad.
             </p>
           </div>
           <div
-            class="p-8 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors"
+            class="p-7 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors relative overflow-hidden"
           >
-            <span class="material-symbols-outlined text-3xl text-white mb-4"
-              >lock</span
-            >
-            <h5 class="text-base font-bold text-white mb-2">
-              Seguridad Zero-Trust
-            </h5>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="relative size-11 rounded-full bg-accent-purple/20 flex items-center justify-center text-accent-purple"
+              >
+                <span class="material-symbols-outlined text-2xl animate-icon-swap"
+                  >support_agent</span
+                >
+              </div>
+              <h5 class="text-base font-bold text-white">Handoff humano</h5>
+            </div>
             <p class="text-slate-500 text-xs leading-relaxed">
-              Protocolos estrictos y encriptación de grado militar en cada capa.
+              Cuando el cliente lo pide, el equipo toma la conversación al
+              instante.
             </p>
           </div>
           <div
-            class="p-8 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors"
+            class="p-7 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors relative overflow-hidden"
           >
-            <span class="material-symbols-outlined text-3xl text-white mb-4"
-              >support_agent</span
-            >
-            <h5 class="text-base font-bold text-white mb-2">
-              Soporte Expertos
-            </h5>
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="relative size-11 rounded-full bg-white/10 flex items-center justify-center text-white icon-ring"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >inbox</span
+                >
+              </div>
+              <h5 class="text-base font-bold text-white">Inbox central</h5>
+            </div>
             <p class="text-slate-500 text-xs leading-relaxed">
-              Ingenieros dedicados disponibles para resolver incidencias
-              complejas.
+              Todo en Chatwoot: conversaciones, clientes y desempeño en un solo
+              lugar.
+            </p>
+          </div>
+          <div
+            class="p-7 rounded-3xl bg-surface-light border border-white/5 hover:bg-white/5 transition-colors relative overflow-hidden"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <div
+                class="relative size-11 rounded-full bg-primary/10 flex items-center justify-center text-primary"
+              >
+                <span class="material-symbols-outlined text-2xl animate-icon-pop"
+                  >shopping_bag</span
+                >
+              </div>
+              <h5 class="text-base font-bold text-white">Ventas en WhatsApp</h5>
+            </div>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              Reservas y cierres sin salir del chat, con métricas de conversión.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <section class="py-32 bg-black relative overflow-hidden">
+    <section class="py-28 bg-black relative overflow-hidden" id="impacto">
       <div
         class="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"
       ></div>
@@ -452,8 +522,11 @@
       ></div>
       <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-16 text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white">
-          Resultados Reales
+          Impacto medible en semanas
         </h2>
+        <p class="text-slate-500 text-sm mt-3">
+          Menos chats perdidos, más reservas y un equipo con control total.
+        </p>
       </div>
       <div class="flex overflow-hidden relative w-full">
         <div
@@ -464,8 +537,8 @@
           >
             <div class="flex gap-1 text-primary mb-4 text-xs">★★★★★</div>
             <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-              "Redujo nuestros costos operativos en un 30%. La interfaz es tan
-              limpia que el equipo no necesitó capacitación."
+              "Reducimos el tiempo de respuesta a menos de un minuto y subimos
+              las reservas nocturnas en un 28%."
             </p>
             <div class="flex items-center gap-3">
               <div class="w-8 h-8 rounded-full bg-slate-700 overflow-hidden">
@@ -478,7 +551,7 @@
               <div>
                 <p class="text-white font-semibold text-xs">Ana García</p>
                 <p class="text-slate-500 text-[10px] uppercase tracking-wide">
-                  CTO, FinTech Solutions
+                  Directora Operativa, Hotel Aurora
                 </p>
               </div>
             </div>
@@ -493,8 +566,8 @@
             </div>
             <div class="flex gap-1 text-primary mb-4 text-xs">★★★★★</div>
             <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-              "La migración fue transparente. Cero tiempo de inactividad, que
-              era nuestra mayor preocupación. Increíble."
+              "El handoff a humanos es perfecto. El equipo ve todo en Chatwoot y
+              no perdemos ninguna conversación."
             </p>
             <div class="flex items-center gap-3">
               <div class="w-8 h-8 rounded-full bg-slate-700 overflow-hidden">
@@ -507,7 +580,7 @@
               <div>
                 <p class="text-white font-semibold text-xs">Carlos Mendez</p>
                 <p class="text-slate-500 text-[10px] uppercase tracking-wide">
-                  Ops Director, LogiTrans
+                  Gerente de Ventas, Marina Beach Club
                 </p>
               </div>
             </div>
@@ -517,8 +590,8 @@
           >
             <div class="flex gap-1 text-primary mb-4 text-xs">★★★★★</div>
             <p class="text-slate-300 mb-6 text-sm leading-relaxed">
-              "Software intuitivo que escala. Hemos duplicado transacciones sin
-              fricción técnica alguna."
+              "Los clientes reservan directo por WhatsApp. El panel nos muestra
+              métricas claras por sucursal."
             </p>
             <div class="flex items-center gap-3">
               <div class="w-8 h-8 rounded-full bg-slate-700 overflow-hidden">
@@ -531,7 +604,7 @@
               <div>
                 <p class="text-white font-semibold text-xs">Laura Torres</p>
                 <p class="text-slate-500 text-[10px] uppercase tracking-wide">
-                  CEO, RetailNova
+                  Fundadora, Bistro Verde
                 </p>
               </div>
             </div>
@@ -548,10 +621,11 @@
         <h2
           class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight"
         >
-          Construya el futuro.
+          Lanza tu concierge AI en días.
         </h2>
         <p class="text-lg text-slate-400 mb-10 mx-auto leading-relaxed">
-          Únase a los líderes del mercado que confían en OpenSystemSoft.
+          Conecta WhatsApp, activa el bot con visión y gestiona todo desde el
+          panel admin y Chatwoot.
         </p>
         <div
           class="flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -566,11 +640,11 @@
           <button
             class="w-full sm:w-auto h-12 px-8 rounded-xl bg-white text-black font-semibold hover:bg-slate-200 transition-colors whitespace-nowrap"
           >
-            Solicitar Acceso
+            Solicitar Demo
           </button>
         </div>
         <p class="mt-6 text-xs text-slate-600">
-          Sin compromiso. Equipo de soporte disponible 24/7.
+          Activación guiada, métricas en vivo y soporte dedicado.
         </p>
       </div>
     </section>
@@ -582,12 +656,11 @@
               class="flex items-center gap-2 mb-6 text-white font-bold tracking-tight"
             >
               <span class="material-symbols-outlined text-xl">grid_view</span>
-              OpenSystemSoft
+              OpenSystemSoft AI
             </div>
             <p class="text-slate-500 mb-6 leading-relaxed">
-              Infraestructura de vanguardia para la próxima generación de
-              empresas digitales. Diseñado para la escalabilidad, construido
-              para la velocidad.
+              Plataforma AI para WhatsApp con Chatwoot, handoff humano y panel
+              admin para operar clientes y planes sin fricción.
             </p>
             <div class="flex gap-4">
               <a
@@ -611,17 +684,17 @@
             <ul class="space-y-3 text-slate-500">
               <li>
                 <a class="hover:text-primary transition-colors" href="#"
-                  >Compras</a
+                  >Chatbot AI</a
                 >
               </li>
               <li>
                 <a class="hover:text-primary transition-colors" href="#"
-                  >Cloud</a
+                  >Chatwoot</a
                 >
               </li>
               <li>
                 <a class="hover:text-primary transition-colors" href="#"
-                  >Seguridad</a
+                  >Panel Admin</a
                 >
               </li>
               <li>
@@ -634,12 +707,12 @@
             <ul class="space-y-3 text-slate-500">
               <li>
                 <a class="hover:text-primary transition-colors" href="#"
-                  >Nosotros</a
+                  >Equipo</a
                 >
               </li>
               <li>
                 <a class="hover:text-primary transition-colors" href="#"
-                  >Carreras</a
+                  >Partners</a
                 >
               </li>
               <li>
