@@ -103,6 +103,35 @@
           transparent 100%
         );
       }
+      .pipeline-connector {
+        background: linear-gradient(90deg, rgba(59, 130, 246, 0), #60a5fa, rgba(59, 130, 246, 0));
+        background-size: 200% 100%;
+        animation: flow-right 2.8s linear infinite;
+      }
+      .pipeline-connector-vertical {
+        background: linear-gradient(180deg, rgba(59, 130, 246, 0), #60a5fa, rgba(59, 130, 246, 0));
+        background-size: 100% 200%;
+        animation: flow-down 2.8s linear infinite;
+      }
+      .pipeline-step {
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.45);
+      }
+      @keyframes flow-right {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+      @keyframes flow-down {
+        0% {
+          background-position: 0 200%;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
     </style>
   </head>
   <body
@@ -439,6 +468,108 @@
               Ingenieros dedicados disponibles para resolver incidencias
               complejas.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-32 bg-black relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-black to-black"></div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+            Arquitectura del sistema
+          </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
+            Multi-tenant, multi-nicho y conectado a Meta WhatsApp Business.
+          </h2>
+          <p class="text-slate-400 text-base md:text-lg leading-relaxed">
+            Diseñamos workspaces independientes por cliente, plantillas por industria y un
+            orquestador de mensajes que garantiza conversaciones oficiales, cumplimiento y escalabilidad
+            global desde el primer día.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
+          <div class="glass-panel rounded-2xl p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">
+              Workspaces multi-tenant
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Separación por organización, permisos por rol y data routing seguro con auditoría en tiempo real.
+            </p>
+          </div>
+          <div class="glass-panel rounded-2xl p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">
+              Plantillas multi-nicho
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Flujos preconfigurados para retail, salud, servicios y e-commerce, listos para activar en minutos.
+            </p>
+          </div>
+          <div class="glass-panel rounded-2xl p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">
+              Integración Meta oficial
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Números verificados, calidad de plantilla y cumplimiento de políticas para conversaciones oficiales.
+            </p>
+          </div>
+        </div>
+        <div class="mt-12 glass-panel rounded-3xl p-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-2 text-center">
+            <div class="pipeline-step rounded-2xl bg-surface-dark border border-white/10 px-5 py-4">
+              <p class="text-xs uppercase tracking-widest text-slate-500">Inicio</p>
+              <h4 class="text-white text-sm font-semibold mt-2">WhatsApp</h4>
+            </div>
+            <div class="hidden md:block pipeline-connector h-0.5 flex-1 max-w-[70px] rounded-full"></div>
+            <div class="md:hidden pipeline-connector-vertical w-0.5 h-8 mx-auto rounded-full"></div>
+            <div class="pipeline-step rounded-2xl bg-surface-dark border border-white/10 px-5 py-4">
+              <p class="text-xs uppercase tracking-widest text-slate-500">Automatización</p>
+              <h4 class="text-white text-sm font-semibold mt-2">Bot service</h4>
+            </div>
+            <div class="hidden md:block pipeline-connector h-0.5 flex-1 max-w-[70px] rounded-full"></div>
+            <div class="md:hidden pipeline-connector-vertical w-0.5 h-8 mx-auto rounded-full"></div>
+            <div class="pipeline-step rounded-2xl bg-surface-dark border border-white/10 px-5 py-4">
+              <p class="text-xs uppercase tracking-widest text-slate-500">Inbox</p>
+              <h4 class="text-white text-sm font-semibold mt-2">Chatwoot</h4>
+            </div>
+            <div class="hidden md:block pipeline-connector h-0.5 flex-1 max-w-[70px] rounded-full"></div>
+            <div class="md:hidden pipeline-connector-vertical w-0.5 h-8 mx-auto rounded-full"></div>
+            <div class="pipeline-step rounded-2xl bg-surface-dark border border-white/10 px-5 py-4">
+              <p class="text-xs uppercase tracking-widest text-slate-500">Escalamiento</p>
+              <h4 class="text-white text-sm font-semibold mt-2">Human handoff</h4>
+            </div>
+            <div class="hidden md:block pipeline-connector h-0.5 flex-1 max-w-[70px] rounded-full"></div>
+            <div class="md:hidden pipeline-connector-vertical w-0.5 h-8 mx-auto rounded-full"></div>
+            <div class="pipeline-step rounded-2xl bg-surface-dark border border-white/10 px-5 py-4">
+              <p class="text-xs uppercase tracking-widest text-slate-500">Control</p>
+              <h4 class="text-white text-sm font-semibold mt-2">Admin panel</h4>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 text-left">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">verified</span>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Números verificados y conversaciones oficiales para una entregabilidad superior y reputación estable.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">stacked_line_chart</span>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Escala horizontal para miles de chats simultáneos con balanceo y monitoreo continuo.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">payments</span>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Modelo de costos claro: tarifa de Meta por conversación + fee SaaS mensual por plataforma.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">support_agent</span>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                Handoff humano con contexto completo y panel administrativo para supervisión y métricas.
+              </p>
+            </div>
           </div>
         </div>
       </div>
