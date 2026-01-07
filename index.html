@@ -443,6 +443,158 @@
         </div>
       </div>
     </section>
+    <section class="py-32 relative bg-black/95" id="plataforma">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Arquitectura de la Plataforma
+          </h2>
+          <p class="text-slate-400 max-w-2xl">
+            Flujos principales, módulos clave y reglas operativas que definen
+            una operación confiable de soporte y automatización.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <div
+            class="rounded-3xl border border-white/5 bg-surface-dark p-8 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >route</span
+              >
+              <h3 class="text-xl font-semibold text-white">Main Flows</h3>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+                Onboarding (alta, verificación y configuración inicial).
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+                Conversation flow (asistente, routing, SLA y seguimiento).
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+                Admin operations (roles, permisos y operaciones de soporte).
+              </li>
+            </ul>
+          </div>
+          <div
+            class="rounded-3xl border border-white/5 bg-surface-dark p-8 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-accent-purple text-3xl"
+                >grid_view</span
+              >
+              <h3 class="text-xl font-semibold text-white">Modules/Screens</h3>
+            </div>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Dashboard
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Channels
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Chatwoot SSO chat
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                AI config
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Knowledge base
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Integrations
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Billing
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-accent-purple"></span>
+                Security/auditing
+              </li>
+            </ul>
+          </div>
+          <div
+            class="rounded-3xl border border-white/5 bg-surface-dark p-8 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-white text-3xl"
+                >security</span
+              >
+              <h3 class="text-xl font-semibold text-white">Hard Rules</h3>
+            </div>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-white/70"></span>
+                Rate limits per tenant y por canal.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-white/70"></span>
+                Kill switch global con rollback inmediato.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-white/70"></span>
+                Human fallback en casos críticos o sin confianza.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-2 h-2 mt-2 rounded-full bg-white/70"></span>
+                Tenant isolation con segregación de datos y llaves.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="rounded-3xl border border-white/5 bg-surface-light p-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6"
+        >
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-2">
+              Recommended Stack
+            </h3>
+            <p class="text-slate-400 text-sm">
+              Arquitectura moderna para escalar IA conversacional y operaciones
+              críticas.
+            </p>
+          </div>
+          <ul
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-sm text-slate-200"
+          >
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              Next.js
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              NestJS/Node
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              Supabase
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              Chatwoot
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              LLM+Vision
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              Redis/BullMQ
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              S3
+            </li>
+            <li class="px-3 py-2 rounded-xl bg-white/5 border border-white/10">
+              pgvector/Qdrant
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section class="py-32 bg-black relative overflow-hidden">
       <div
         class="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"
