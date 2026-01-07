@@ -25,4 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
   }
+
+  const signUpButton = document.getElementById("sign-up-button");
+  const workspacePanel = document.getElementById("workspace-panel");
+  if (signUpButton && workspacePanel) {
+    signUpButton.addEventListener("click", () => {
+      workspacePanel.classList.toggle("hidden");
+    });
+  }
 });
