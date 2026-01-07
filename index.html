@@ -103,6 +103,178 @@
           transparent 100%
         );
       }
+      .how-icon {
+        position: relative;
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #fff;
+        overflow: hidden;
+      }
+      .how-icon .material-symbols-outlined {
+        font-size: 28px;
+      }
+      .ai-dots {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        gap: 4px;
+      }
+      .ai-dots span {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: #60a5fa;
+        opacity: 0.7;
+        animation: aiDot 0.9s ease-in-out infinite;
+      }
+      .ai-dots span:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .ai-dots span:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .handoff-bubble {
+        position: absolute;
+        right: 8px;
+        top: 12px;
+        width: 22px;
+        height: 14px;
+        border-radius: 6px;
+        background: rgba(248, 250, 252, 0.2);
+        animation: bubbleSlide 0.85s ease-in-out infinite;
+      }
+      .handoff-bubble::after {
+        content: "";
+        position: absolute;
+        right: 4px;
+        bottom: -4px;
+        width: 8px;
+        height: 8px;
+        background: rgba(248, 250, 252, 0.2);
+        transform: rotate(45deg);
+      }
+      .handoff-signal {
+        position: absolute;
+        left: 8px;
+        bottom: 10px;
+        width: 18px;
+        height: 18px;
+      }
+      .handoff-signal span {
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        border: 1px solid rgba(96, 165, 250, 0.6);
+        animation: handoffFade 0.9s ease-in-out infinite;
+      }
+      .handoff-signal span:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .inbox-cards {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        display: grid;
+        gap: 4px;
+      }
+      .inbox-cards span {
+        width: 22px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(168, 85, 247, 0.45);
+        animation: inboxPulse 0.95s ease-in-out infinite;
+      }
+      .inbox-cards span:nth-child(2) {
+        width: 28px;
+        animation-delay: 0.2s;
+      }
+      .inbox-cards span:nth-child(3) {
+        width: 18px;
+        animation-delay: 0.4s;
+      }
+      .booking-check {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: rgba(34, 197, 94, 0.25);
+        border: 1px solid rgba(34, 197, 94, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bookingPulse 0.85s ease-in-out infinite;
+      }
+      .booking-check::after {
+        content: "";
+        width: 7px;
+        height: 4px;
+        border-left: 2px solid #4ade80;
+        border-bottom: 2px solid #4ade80;
+        transform: rotate(-45deg);
+      }
+      @keyframes aiDot {
+        0%,
+        100% {
+          transform: scale(0.7);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes bubbleSlide {
+        0%,
+        100% {
+          transform: translateX(0);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translateX(-6px);
+          opacity: 0.9;
+        }
+      }
+      @keyframes handoffFade {
+        0%,
+        100% {
+          transform: scale(0.7);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+      }
+      @keyframes inboxPulse {
+        0%,
+        100% {
+          opacity: 0.5;
+          transform: translateX(0);
+        }
+        50% {
+          opacity: 0.9;
+          transform: translateX(4px);
+        }
+      }
+      @keyframes bookingPulse {
+        0%,
+        100% {
+          transform: scale(0.9);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body
@@ -440,6 +612,122 @@
               complejas.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-28 bg-black relative overflow-hidden" id="how-it-works">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-primary/10 via-black to-black pointer-events-none"
+      ></div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div class="max-w-2xl mb-14">
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 mb-4"
+          >
+            How it works
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            Conversaciones automatizadas que escalan sin perder el toque humano.
+          </h2>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Flujo inteligente que responde al instante, transfiere a humanos y
+            centraliza la gestión en Chatwoot mientras impulsa ventas y reservas
+            por WhatsApp.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article
+            class="p-6 rounded-2xl bg-surface-light border border-white/5 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div class="how-icon">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <div class="ai-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">
+                  AI auto-reply
+                </h3>
+                <p class="text-xs text-slate-500">Respuesta inmediata 24/7.</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Responde preguntas frecuentes en segundos y mantiene el tono de
+              marca con precisión.
+            </p>
+          </article>
+          <article
+            class="p-6 rounded-2xl bg-surface-light border border-white/5 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div class="how-icon">
+                <span class="material-symbols-outlined">support_agent</span>
+                <span class="handoff-bubble"></span>
+                <div class="handoff-signal">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">
+                  Human takeover
+                </h3>
+                <p class="text-xs text-slate-500">Handoff sin fricción.</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Cuando la conversación lo requiere, un agente toma el control con
+              el contexto completo.
+            </p>
+          </article>
+          <article
+            class="p-6 rounded-2xl bg-surface-light border border-white/5 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div class="how-icon">
+                <span class="material-symbols-outlined">inbox</span>
+                <div class="inbox-cards">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">
+                  Chatwoot inbox
+                </h3>
+                <p class="text-xs text-slate-500">Un canal centralizado.</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Unifica todos los mensajes, métricas y seguimientos en un solo
+              panel operativo.
+            </p>
+          </article>
+          <article
+            class="p-6 rounded-2xl bg-surface-light border border-white/5 hover:border-white/10 transition-colors"
+          >
+            <div class="flex items-center gap-4 mb-6">
+              <div class="how-icon">
+                <span class="material-symbols-outlined">event_available</span>
+                <div class="booking-check"></div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-white">
+                  WhatsApp sales
+                </h3>
+                <p class="text-xs text-slate-500">Ventas y reservas.</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Convierte conversaciones en citas y compras con confirmaciones
+              rápidas.
+            </p>
+          </article>
         </div>
       </div>
     </section>
